@@ -1,0 +1,48 @@
+# Required to connect to your outgoing mail server. Example for using gmail:
+# gmail
+SMTP_SERVER: smtp.gmail.com
+SMTP_PORT: 587
+USERNAME: scott.hooker@gmail.com
+PASSWORD: "xxxxxxxx"
+
+TIMEZONE: 'US/Pacific'
+
+PARTICIPANTS:
+  - Scott <x>
+  - Nick <x>
+  - Jessie <x>
+  - Tom <x>
+  - Alice <x>
+  - Joey <x>
+  - Mart <x>
+  - Graham <x>
+  - Ellie <x>
+
+# Warning -- if you mess this up you could get an infinite loop
+DONT-PAIR:
+  - Scott, Graham
+  - Ellie, Jessie
+  - Ellie, Alice
+  - Alice, Jessie
+  - Nick, Tom
+  - Mart, Joey
+
+# From address should be the organizer in case participants have any questions
+FROM: Scott <scott.hooker@gmail.com>
+
+# Both SUBJECT and MESSAGE can include variable substitution for the 
+# "santa" and "santee"
+SUBJECT: Your secret santa recipient is {santee}
+MESSAGE: 
+  Dear {santa},
+  
+  This year you are {santee}'s Secret Santa!.
+  
+  The maximum spending limit is a tenner?? Not sure we decided on one. Let's discuss in the Whatsapp group.
+  Same rule as last year... Have to buy the gift in Tooting.
+  
+  This message was automagically generated from a computer. Nothing could possibly go wrong...
+
+  For those wanting to validate the code you can read it here... I mostly stole it from someone else but made a few changes
+  http://github.com/scotthooker/secret-santa
+  
